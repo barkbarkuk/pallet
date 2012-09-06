@@ -28,7 +28,7 @@
                    {:assoc (plan-fn
                              [c (remote-file-content
                                  (.getAbsolutePath tmp-file))]
-                             (assoc-settings :myapp c))
+                             (assoc-settings :myapp @c))
                     :get (plan-fn
                            [node target-node
                             c (get-node-settings node :myapp)]
